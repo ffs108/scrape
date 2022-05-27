@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 url = r'https://www.nba.com/stats/players/advanced/?sort=GP&dir=-1' #can change this
-driver = webdriver.Chrome()
+driver = webdriver.Chrome() #webdriver.Firefox()
 driver.get(url)
 select = Select(driver.find_element('xpath', r"/html/body/main/div/div/div[2]/div/div/nba-stat-table/div[1]/div/div/select")) 
 select.select_by_index(0)
